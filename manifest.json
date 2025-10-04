@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Cartman AI",
+  "version": "1.0",
+  "description": "Chat with you while you are browsing a website.",
+  "icons": {
+   
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "permissions": ["sidePanel"],
+  "content_scripts": [
+    {
+      "js": ["scripts/events.js"],
+      "matches":["http://*/*", "https://*/*"]
+    }
+  ]
+}
