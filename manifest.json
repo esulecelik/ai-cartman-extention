@@ -9,11 +9,15 @@
   "side_panel": {
     "default_path": "sidepanel/index.html"
   },
-  "permissions": ["sidePanel"],
+  "permissions": ["sidePanel","activeTab","scripting"],
   "content_scripts": [
     {
-      "js": ["scripts/events.js"],
-      "matches":["http://*/*", "https://*/*"]
+      "js": ["scripts/content.js"],
+      "matches":["<all_urls>"],
+      "run_at": "document_end"
     }
-  ]
+  ],
+  "background": {
+    "service_worker":"scripts/background.js"
+  }
 }

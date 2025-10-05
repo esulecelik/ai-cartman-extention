@@ -43,10 +43,23 @@ textarea#input-prompt {
     height: auto;
     display: flex;
     flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
     
 }
+
+.user-prompt {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 550px) {
-    .cartman-says {
+    .cartman-says,.user-says{
         width: 100%;
     }
 }
@@ -70,4 +83,16 @@ textarea#input-prompt {
     border-radius: 10px;
     background-color: aliceblue;
     padding: 10px;
+}
+
+
+
+.user-says {  
+    text-align: left;
+    height: auto;
+    width: fit-content;
+    font-size: 17px;
+    padding: 10px;
+    overflow-wrap: anywhere;
+
 }
