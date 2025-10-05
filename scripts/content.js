@@ -1,9 +1,9 @@
 
-var port = chrome.runtime.connect({ name: "channel1" });
+// Background servise bağlantı açılıyor,eğer bağlantı kapanırsa
+// tekrar bağlanılıyor. 
+var port = chrome.runtime.connect({ name: "contentChannel" });
 port.onDisconnect.addListener(() => {
-    port = chrome.runtime.connect({ name: "channel1" });
+    port = chrome.runtime.connect({ name: "contentChannel" });
 });
 
-
-const body = document.body.innerText;
-console.log(body);
+port.postMessage({promt:document.body.innerText});
