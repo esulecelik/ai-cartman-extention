@@ -9,7 +9,7 @@
   "side_panel": {
     "default_path": "sidepanel/index.html"
   },
-  "permissions": ["sidePanel","activeTab","scripting"],
+  "permissions": ["sidePanel","storage","activeTab","scripting"],
   "content_scripts": [
     {
       "js": ["scripts/content.js"],

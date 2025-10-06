@@ -13,7 +13,7 @@ window.onload = function() {
 
     port.onMessage.addListener(function(msg) {
     if (msg.action === "cartmanSays") {
-        console.log("Background'dan yeni veri geldi:", msg.data);
+        // console.log("Background'dan yeni veri geldi:", msg.data);
         appendCartmanDialog(msg.data);
     }
 });
